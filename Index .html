@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <div class="registration-container">
+        <h1>Student Registration</h1>
+        <form id="registration-form">
+            <!-- Student Name -->
+            <div class="form-group" id="name-group">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" placeholder="Full Name">
+            <p class="error-message" style="display: none;">Student name is required and must be at least 3 characters long.</p>              </div>
+
+            <!-- Student ID -->
+            <div class="form-group" id="id-group">
+                <label for="studentId">Student ID:</label>
+                <input type="text" id="studentId" name="studentId" placeholder="e.g., S12345">
+                <p class="error-message" style="display: none;">Student ID is required and must be alphanumeric (e.g., S12345).</p>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group" id="email-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="student@example.com">
+                <p class="error-message" style="display: none;">A valid email address is required.</p>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group" id="phone-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g., +1234567890 (optional)">
+                <p class="error-message" style="display: none;">Please enter a valid phone number (optional).</p>
+            </div>
+
+
+            <!-- Date of Birth -->
+            <div class="form-group" id="dob-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+                <p class="error-message" style="display: none;">Date of Birth is required and must be a valid date.</p>
+            </div>
+
+            <!-- Gender -->
+            <div class="form-group" id="gender-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <p class="error-message" style="display: none;">Gender is required.</p>
+            </div>
+
+            <!-- Course Enrolled -->
+            <div class="form-group" id="course-group">
+                <label for="course">Course Enrolled:</label>
+                <input type="text" id="course" name="course" placeholder="e.g., Computer Science">
+                <p class="error-message" style="display: none;">Course Enrolled is required.</p>
+            </div>
+
+
+
+            
+
+            <button type="submit">Register Student</button>
+            <p id="success-message" class="success-message" style="display: none;">Registration successful! (Data logged to console, ready for backend integration)</p>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
