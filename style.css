@@ -1,0 +1,117 @@
+body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a; /* Light gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 1.5rem; /* Increased padding for overall body */
+            box-sizing: border-box;
+        }
+        .registration-container {
+            background-color: #2a2a2a;
+            border-color: #08d345;
+            border-radius: 1.5rem; /* More rounded corners */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* Stronger shadow */
+            padding: 3rem; /* Increased padding */
+            width: 100%;
+            max-width: 600px; /* Wider form for better layout */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem; /* Space between sections */
+        }
+        h1 {
+            font-size: 2.5rem; /* Larger heading */
+            font-weight: 700;
+            color:#08d345 ; /* Darker text */
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1.25rem; /* Space between form groups */
+            text-align: left; /* Align labels to the left */
+        }
+        .form-group label {
+            display: block;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #08d345; /* Medium dark text for labels */
+            margin-bottom: 0.5rem;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="date"],
+        .form-group select {
+            width: 100%;
+            padding: 0.85rem 1.25rem; /* More padding for inputs */
+            border: 1px solid #08d345; /* Light gray border */
+             background-color: #3a3a3a;
+            border-radius: 0.75rem; /* Rounded input */
+            outline: none;
+            font-size: 1rem;
+            transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #3b82f6; /* Blue border on focus */
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25); /* Blue glow on focus */
+        }
+        .form-group .error-message {
+            color: #ef4444; /* Red for error messages */
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            display: none; /* Hidden by default */
+        }
+        .form-group.invalid input,
+        .form-group.invalid select {
+            border-color: #ef4444; /* Red border for invalid fields */
+        }
+        .form-group.invalid .error-message {
+            display: block; /* Show error message for invalid fields */
+        }
+        button[type="submit"] {
+            background-color: #22c55e; /* Green submit button */
+            color: white;
+            padding: 1rem 2rem; /* More padding for button */
+            border-radius: 0.75rem; /* Rounded button */
+            cursor: pointer;
+            font-size: 1.125rem; /* Larger font for button */
+            font-weight: 600;
+            transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            width: 100%; /* Full width button */
+            margin-top: 1.5rem;
+        }
+        button[type="submit"]:hover {
+            background-color: #16a34a; /* Darker green on hover */
+            transform: translateY(-1px); /* Slight lift on hover */
+        }
+        button[type="submit"]:active {
+            transform: translateY(0); /* Press effect */
+        }
+        .success-message {
+            color: #10b981; /* Green for success messages */
+            font-weight: 600;
+            margin-top: 1.5rem;
+            display: none; /* Hidden by default */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .registration-container {
+                padding: 2rem;
+                border-radius: 1rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .form-group input,
+            .form-group select,
+            button[type="submit"] {
+                padding: 0.75rem 1rem;
+                font-size: 0.95rem;
+            }
+        }
